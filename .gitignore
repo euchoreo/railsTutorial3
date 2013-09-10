@@ -19,4 +19,6 @@ doc/
 .idea
 # don't give up your private keys and stuff
 .secret
+
+# my effing password is in this file
  config/database.yml

@@ -3,12 +3,15 @@ ruby '1.9.3'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.0'
-
+gem 'pg', '0.15.1'
 group :development, :test do
-  gem 'sqlite3', '1.3.7'
+  # gem 'sqlite3', '1.3.7' - removed per exercise 3 requirements (this is good since the real host does not use sqllite)
+  gem 'rubyzip', '< 1.0.0'
   gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec', '2.5.0'
+  gem 'spork-rails', github: 'sporkrb/spork-rails'
 end
-
+gem 'bootstrap-sass', '2.3.2.0'
 group :test do
   gem 'selenium-webdriver', '2.0.0'
   gem 'capybara', '2.1.0'
@@ -26,6 +29,6 @@ group :doc do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
+  # gem 'pg', '0.15.1' <-- moved to top for all usage
   gem 'rails_12factor', '0.0.2'
 end
